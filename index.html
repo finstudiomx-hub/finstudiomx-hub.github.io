@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-
+<meta name="google-adsense-account" content="ca-pub-8357102612227215">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Finance Studio — Administra tu presupuesto, inversiones, hipoteca y retiro. Calculadoras financieras para México con datos reales.">
 <meta name="keywords" content="finanzas personales mexico, presupuesto, AFORE, inversiones, hipoteca, CETES, Nu, retiro">
@@ -20,7 +20,7 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<title>Finance Studio Premium — Finanzas Personales MX</title>
+<title>Finance Studio — Finanzas Personales MX</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
@@ -1238,7 +1238,8 @@
     background: rgba(255,255,255,0.03);
   }
 </style>
-<!-- AdSense removido en versión Premium -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8357102612227215"
+     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
@@ -1286,16 +1287,12 @@
       </div>
     </div>
     <div class="sidebar-footer">
-      <div class="nav-item" onclick="showPage('config')" style="margin-top:8px;border-top:1px solid var(--border);padding-top:8px">
-        <span class="nav-icon">⚙️</span>
-        <span>Actualizar tasas</span>
-      </div>
-      <a href="https://finstudiomx-hub.github.io/finance-studio" target="_blank" id="link-share"
+      <a href="https://finstudio1.gumroad.com/l/haicig" target="_blank" id="link-premium"
         style="display:block;background:linear-gradient(135deg,#16A34A,#2563EB);color:#fff;
                text-decoration:none;border-radius:8px;padding:8px 10px;text-align:center;
                font-size:11px;font-weight:700;margin-bottom:8px;letter-spacing:0.3px;
                transition:opacity 0.15s" onmouseover="this.style.opacity=0.9" onmouseout="this.style.opacity=1">
-        ❤️ ¿Te gusta? Comparte con amigos
+        🚀 Versión Premium — $99 MXN
       </a>
       <a href="https://buymeacoffee.com/finstudiomx" target="_blank"
         style="display:flex;align-items:center;justify-content:center;gap:6px;
@@ -1327,10 +1324,10 @@
       </div>
 
       <!-- Barra de acciones Excel -->
-      <div id="excel-bar" style="display:none;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
+      <div id="excel-bar" style="display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;">
         <div style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.8px;flex-shrink:0">📊 Excel</div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;flex:1">
-          <button class="btn btn-ghost" style="font-size:12px" onclick="exportarExcel()">⬇️ Exportar Excel con mis datos</button>
+          <button class="btn btn-ghost" style="font-size:12px" onclick="exportarExcel()">⬇️ Descargar Excel</button>
           <button class="btn btn-ghost" style="font-size:12px" onclick="document.getElementById('excel-file-input').click()">📂 Cargar Excel</button>
           <input type="file" id="excel-file-input" accept=".xlsx" style="display:none" onchange="importarExcel(this)">
         </div>
@@ -1433,7 +1430,22 @@
           </div>
         </div>
 
-        <!-- Sin promo en versión premium -->
+        <!-- Promo premium -->
+        <div style="margin-top:4px;background:linear-gradient(135deg,rgba(22,163,74,0.08),rgba(37,99,235,0.08));
+                    border:1px solid rgba(22,163,74,0.2);border-radius:12px;padding:14px 18px;
+                    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text)">🚀 Finance Studio Premium</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px">Sin anuncios · Excel automático · Hipoteca · AFORE · Retiro · Funciona offline</div>
+          </div>
+          <a href="https://finstudio1.gumroad.com/l/haicig" target="_blank" id="link-premium-dash"
+            style="background:linear-gradient(135deg,#16A34A,#2563EB);color:#fff;
+                   text-decoration:none;border-radius:8px;padding:9px 18px;
+                   font-size:13px;font-weight:700;white-space:nowrap;flex-shrink:0">
+            Obtener por $99 MXN →
+          </a>
+        </div>
+      </div>
 
       <!-- ══ PANEL POR MES ══ -->
       <div class="mes-panel" id="dash-panel-mes">
@@ -1611,7 +1623,7 @@
         </div>
         <div class="topbar-actions">
           <button class="btn btn-ghost" onclick="copyFromPrevMonth()" id="btn-copy-prev" style="display:none">📋 Copiar mes anterior</button>
-          <button class="btn btn-ghost" onclick="exportarExcel()">📊 Exportar Excel</button>
+          <button class="btn btn-ghost" onclick="exportarExcel()">📊 Descargar Excel</button>
           <button class="btn btn-ghost" onclick="window.print()">🖨 Imprimir PDF</button>
           <button class="btn btn-primary" onclick="saveData(true)">💾 Guardar</button>
         </div>
@@ -2676,77 +2688,6 @@
   </div>
 </div>
 
-
-    <!-- CONFIG: Actualizar tasas -->
-    <div class="page" id="page-config">
-      <div class="topbar">
-        <div>
-          <div class="page-title">Actualizar tasas</div>
-          <div class="page-subtitle">Mantén los datos actualizados cada mes</div>
-        </div>
-        <div class="topbar-actions">
-          <button class="btn btn-primary" onclick="guardarTasas()">Guardar cambios</button>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-
-        <!-- Inversiones -->
-        <div class="calc-card">
-          <div style="font-weight:700;font-size:15px;color:var(--accent2);margin-bottom:4px">Plataformas de inversión</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:16px">Fuente: sitios oficiales de cada plataforma</div>
-          <div id="tasas-inversiones-form"></div>
-          <div style="margin-top:12px">
-            <div class="field-label">Fecha de actualización</div>
-            <input class="field-input" type="text" id="fecha-inversiones" placeholder="julio 2026">
-          </div>
-        </div>
-
-        <!-- AFOREs -->
-        <div class="calc-card">
-          <div style="font-weight:700;font-size:15px;color:var(--accent2);margin-bottom:4px">AFOREs — IRN CONSAR</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:16px">Fuente: gob.mx/consar — publicación trimestral</div>
-          <div id="tasas-afores-form"></div>
-          <div style="margin-top:12px">
-            <div class="field-label">Fecha de actualización</div>
-            <input class="field-input" type="text" id="fecha-afores" placeholder="abril 2026">
-          </div>
-        </div>
-
-        <!-- Hipotecas -->
-        <div class="calc-card">
-          <div style="font-weight:700;font-size:15px;color:var(--accent2);margin-bottom:4px">Crédito hipotecario</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:16px">Fuente: CONDUSEF comparador hipotecario</div>
-          <div id="tasas-hipotecas-form"></div>
-          <div style="margin-top:12px">
-            <div class="field-label">Fecha de actualización</div>
-            <input class="field-input" type="text" id="fecha-hipotecas" placeholder="julio 2026">
-          </div>
-        </div>
-
-        <!-- Inflación y otros -->
-        <div class="calc-card">
-          <div style="font-weight:700;font-size:15px;color:var(--accent2);margin-bottom:4px">Inflación y parámetros</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:16px">Fuente: banxico.org.mx</div>
-          <div class="br-form-grid" style="margin-bottom:0">
-            <div>
-              <div class="field-label">Inflación anual MX (%)</div>
-              <input class="field-input" type="number" id="cfg-inflacion" step="0.01" placeholder="3.55">
-              <div class="field-hint">Actualiza los defaults en calculadoras</div>
-            </div>
-            <div>
-              <div class="field-label">TIIE actual (%)</div>
-              <input class="field-input" type="number" id="cfg-tiie" step="0.01" placeholder="10.0">
-              <div class="field-hint">Para créditos a tasa variable</div>
-            </div>
-          </div>
-          <div style="margin-top:12px;padding:10px 12px;background:var(--surface);border-radius:8px;font-size:12px;color:var(--muted);line-height:1.6">
-            Los cambios se aplican como defaults en las calculadoras. Los datos ya capturados por el usuario no se modifican.
-          </div>
-        </div>
-      </div>
-    </div>
-
   </main>
 </div>
 
@@ -2824,7 +2765,7 @@ function loadStorage() {
 let allData = loadStorage();
 
 // isPremium — cambiar a true en la versión de pago
-const IS_PREMIUM = true;
+const IS_PREMIUM = false;
 
 function saveData(autoExport) {
   try {
@@ -3162,15 +3103,8 @@ function switchMonth() {
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  const page = document.getElementById('page-' + id);
-  if (page) page.classList.add('active');
-  if (id === 'config') initConfigPanel();
-  // Marcar el nav item activo por data o buscando el onclick correspondiente
-  document.querySelectorAll('.nav-item').forEach(n => {
-    if (n.getAttribute('onclick') && n.getAttribute('onclick').includes("'" + id + "'")) {
-      n.classList.add('active');
-    }
-  });
+  document.getElementById('page-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
 }
 
 function toggleSection(id) {
@@ -5788,32 +5722,32 @@ initTheme();
 // Al cargar: verificar si hay datos guardados, sino mostrar bienvenida
 (function initApp() {
   const saved = localStorage.getItem('financeStudio2026');
-  if (saved) {
-    // Ya tiene datos: mostrar barra Excel directamente
-    setTimeout(() => {
-      const bar = document.getElementById('excel-bar');
-      if (bar) bar.style.display = 'flex';
-    }, 100);
-  } else {
+  if (!saved) {
     const banner = document.createElement('div');
     banner.id = 'welcome-banner';
     banner.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;display:flex;align-items:center;justify-content:center;';
     banner.innerHTML = `
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px;max-width:460px;width:90%;text-align:center">
-        <div style="font-family:var(--display);font-size:26px;font-weight:700;margin-bottom:6px;color:var(--text)">Finance Studio</div>
-        <div style="font-size:13px;color:var(--muted);margin-bottom:28px">Version Premium · Tus finanzas personales en un solo lugar</div>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px">
-          <button class="btn btn-primary" style="padding:14px;font-size:14px;border-radius:10px" onclick="closeBanner(true)">
-            Comenzar desde cero
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;max-width:440px;width:90%;text-align:center">
+        <div style="font-size:36px;margin-bottom:12px">💰</div>
+        <div style="font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:8px;color:var(--text)">Bienvenido a Finance Studio</div>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.6">¿Cómo quieres comenzar?</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <button class="btn btn-primary" style="padding:12px;font-size:14px" onclick="closeBanner()">
+            📋 Empezar desde cero
           </button>
-          <button class="btn btn-ghost" style="padding:14px;font-size:14px;border-radius:10px"
-            onclick="document.getElementById('excel-file-input').click()">
-            Cargar mis datos desde Excel
+          <button class="btn btn-ghost" style="padding:12px;font-size:14px"
+            onclick="document.getElementById('excel-file-input').click();closeBanner()">
+            📂 Cargar Excel existente
           </button>
         </div>
-        <div style="font-size:11px;color:var(--muted);line-height:1.6">
-          Tus datos se guardan en este navegador.<br>
-          Usa "Cargar Excel" para continuar donde lo dejaste o transferir datos entre dispositivos.
+        <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
+          <a href="https://finstudio1.gumroad.com/l/haicig" target="_blank"
+            style="display:block;background:linear-gradient(135deg,#16A34A,#2563EB);
+                   color:#fff;text-decoration:none;border-radius:8px;padding:10px;
+                   font-size:12px;font-weight:700;text-align:center;margin-bottom:8px">
+            🚀 Descargar versión Premium — $99 MXN
+          </a>
+          <div style="font-size:10px;color:var(--muted);text-align:center">Sin anuncios · Excel automático · Hipoteca · AFORE · Retiro</div>
         </div>
       </div>
     `;
@@ -5821,12 +5755,9 @@ initTheme();
   }
 })();
 
-function closeBanner(showBar) {
+function closeBanner() {
   const b = document.getElementById('welcome-banner');
   if (b) b.remove();
-  // Mostrar barra Excel una vez que el usuario eligio como empezar
-  const bar = document.getElementById('excel-bar');
-  if (bar) bar.style.display = 'flex';
 }
 
 currentMonth = -1;
@@ -6056,14 +5987,14 @@ function exportarExcel() {
     ws['!ref'] = XLSX.utils.encode_range({ s:{r:0,c:0}, e:{r:r+5,c:5} });
     ws['!cols'] = [28,14,14,14,14].map(w => ({ wch: w }));
 
-    // Nombre de hoja abreviado
+    // Nombre de hoja
     const sheetName = mes.slice(0,3) + ' 2026';
     XLSX.utils.book_append_sheet(wb, ws, sheetName);
   });
 
-  // ── HOJAS PREMIUM (solo si IS_PREMIUM o hay datos) ──
+  // ── HOJAS EXTRA (solo en versión Premium) ──
   // INVERSIONES
-  if (myPortafolio.length > 0) {
+  if (IS_PREMIUM && myPortafolio.length > 0) {
     const wsI = {};
     wsI['!merges'] = [];
     let r = 0;
@@ -6102,7 +6033,7 @@ function exportarExcel() {
   }
 
   // BIENES RAÍCES
-  if (myProps.length > 0) {
+  if (IS_PREMIUM && myProps.length > 0) {
     const wsBR = {};
     wsBR['!merges'] = [];
     let r = 0;
@@ -6135,7 +6066,7 @@ function exportarExcel() {
 
   // RETIRO (si hay datos)
   const edadEl = document.getElementById('ret-edad');
-  if (edadEl) {
+  if (IS_PREMIUM && edadEl) {
     const wsRet = {};
     wsRet['!merges'] = [];
     let r = 0;
@@ -6180,34 +6111,6 @@ function exportarExcel() {
     XLSX.utils.book_append_sheet(wb, wsRet, 'Retiro');
   }
 
-  // ── HOJA DE DATOS RAW (para reimportar y recuperar estado completo) ──
-  if (IS_PREMIUM) {
-    const wsData = {};
-    wsData['!merges'] = [];
-    let rd = 0;
-    setCell(wsData, rd, 0, 'DATOS_BACKUP', { font: xlFont(true, XL.textDark, 10) });
-    setCell(wsData, rd, 1, 'NO MODIFICAR ESTA HOJA', { font: xlFont(false, XL.muted, 9) });
-    rd++;
-    // Guardar allData como JSON en una celda
-    setCell(wsData, rd, 0, 'allData');
-    setCell(wsData, rd, 1, JSON.stringify(allData));
-    rd++;
-    setCell(wsData, rd, 0, 'myPortafolio');
-    setCell(wsData, rd, 1, JSON.stringify(myPortafolio));
-    rd++;
-    setCell(wsData, rd, 0, 'myProps');
-    setCell(wsData, rd, 1, JSON.stringify(myProps));
-    rd++;
-    setCell(wsData, rd, 0, 'fsMetas');
-    setCell(wsData, rd, 1, localStorage.getItem('fsMetas') || '{}');
-    rd++;
-    setCell(wsData, rd, 0, 'version');
-    setCell(wsData, rd, 1, 'v0.1');
-    wsData['!ref'] = XLSX.utils.encode_range({ s:{r:0,c:0}, e:{r:rd+1,c:2} });
-    wsData['!cols'] = [18, 200].map(w => ({ wch: w }));
-    XLSX.utils.book_append_sheet(wb, wsData, 'datos_backup');
-  }
-
   // ── GUARDAR ──
   const fecha  = new Date().toISOString().slice(0,10);
   const nombre = IS_PREMIUM ? `FinanceStudio_Premium_${fecha}.xlsx` : `FinanceStudio_Presupuesto_${fecha}.xlsx`;
@@ -6225,83 +6128,47 @@ function importarExcel(input) {
   const reader = new FileReader();
   reader.onload = (e) => {
     try {
-      const wb = XLSX.read(e.target.result, { type: 'array', cellStyles: true });
+      const wb   = XLSX.read(e.target.result, { type: 'array', cellStyles: true });
 
-      // Intentar primero la hoja de backup completo
-      const wsBackup = wb.Sheets['datos_backup'];
-      if (wsBackup) {
-        try {
-          const rows = XLSX.utils.sheet_to_json(wsBackup, { header: 1, defval: '' });
-          const dataMap = {};
-          rows.forEach(row => { if (row[0] && row[1]) dataMap[row[0]] = row[1]; });
-
-          if (dataMap['allData']) {
-            const parsed = JSON.parse(dataMap['allData']);
-            // Restaurar los 12 meses
-            MONTHS.forEach((_, i) => {
-              if (parsed[i]) allData[i] = parsed[i];
-            });
-          }
-          if (dataMap['myPortafolio']) {
-            const p = JSON.parse(dataMap['myPortafolio']);
-            myPortafolio.length = 0;
-            p.forEach(inv => myPortafolio.push(inv));
-            try { localStorage.setItem('fsPortafolio', JSON.stringify(myPortafolio)); } catch(e){}
-          }
-          if (dataMap['myProps']) {
-            const p = JSON.parse(dataMap['myProps']);
-            myProps.length = 0;
-            p.forEach(prop => myProps.push(prop));
-            try { localStorage.setItem('fsProps', JSON.stringify(myProps)); } catch(e){}
-          }
-          if (dataMap['fsMetas']) {
-            try { localStorage.setItem('fsMetas', dataMap['fsMetas']); loadMetas(); } catch(e){}
-          }
-
-          saveData();
-          renderPresupuesto();
-          updateDashboard();
-          if (currentMonth === -1) renderDashboardAnual();
-          setText('excel-status', 'Datos recuperados de: ' + file.name);
-          showToast('📂 Datos recuperados completamente');
-          return;
-        } catch(err) {
-          console.warn('Error leyendo backup, intentando hojas de meses:', err);
-        }
-      }
-
-      // Fallback: leer hojas de meses (compatibilidad con Excel manual)
+      // Leer hoja de cada mes (Ene 2026, Feb 2026, etc.)
       let importados = 0;
       MONTHS.forEach((mes, i) => {
         const sheetName = mes.slice(0,3) + ' 2026';
         const ws = wb.Sheets[sheetName];
         if (!ws) return;
+
         const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
+        // Parsear secciones por título
         const d = allData[i];
         let seccion = null;
         rows.forEach(row => {
           const label = String(row[0]||'').trim();
-          if (label.includes('INGRESOS'))            seccion = 'ingresos';
-          else if (label.includes('GASTOS FIJOS'))   seccion = 'fijos';
-          else if (label.includes('AHORRO'))         seccion = 'ahorro';
-          else if (label.includes('ESTILO DE VIDA')) seccion = 'vida';
+          if (label.includes('INGRESOS'))           seccion = 'ingresos';
+          else if (label.includes('GASTOS FIJOS'))  seccion = 'fijos';
+          else if (label.includes('AHORRO'))        seccion = 'ahorro';
+          else if (label.includes('ESTILO DE VIDA'))seccion = 'vida';
           else if (label.includes('BALANCE') || label.includes('TOTAL')) seccion = null;
           else if (label && seccion && !label.includes('Concepto') && row[1] !== undefined) {
             const est  = parseFloat(String(row[1]).replace(/[$,]/g,'')) || 0;
             const real = parseFloat(String(row[2]).replace(/[$,]/g,'')) || 0;
             const freq = String(row[4]||'Mensual');
             if (seccion === 'ingresos') {
-              const ex = d.ingresos.find(r => r.label === label);
-              if (ex) { ex.est=est; ex.real=real; } else d.ingresos.push({ label, est, real });
+              const exists = d.ingresos.find(r => r.label === label);
+              if (exists) { exists.est=est; exists.real=real; }
+              else d.ingresos.push({ label, est, real });
             } else if (seccion === 'fijos') {
-              const ex = [...d.fijosInd,...d.fijosNoi].find(r => r.label === label);
-              if (ex) { ex.est=est; ex.real=real; ex.freq=freq; } else d.fijosNoi.push({ label, est, real, freq });
+              const arr = [...d.fijosInd,...d.fijosNoi];
+              const exists = arr.find(r => r.label === label);
+              if (exists) { exists.est=est; exists.real=real; exists.freq=freq; }
+              else d.fijosNoi.push({ label, est, real, freq });
             } else if (seccion === 'ahorro') {
-              const ex = d.ahorro.find(r => r.label === label);
-              if (ex) { ex.est=est; ex.real=real; } else d.ahorro.push({ label, est, real });
+              const exists = d.ahorro.find(r => r.label === label);
+              if (exists) { exists.est=est; exists.real=real; }
+              else d.ahorro.push({ label, est, real });
             } else if (seccion === 'vida') {
-              const ex = d.vida.find(r => r.label === label);
-              if (ex) { ex.est=est; ex.real=real; ex.freq=freq; } else d.vida.push({ label, est, real, freq });
+              const exists = d.vida.find(r => r.label === label);
+              if (exists) { exists.est=est; exists.real=real; exists.freq=freq; }
+              else d.vida.push({ label, est, real, freq });
             }
           }
         });
@@ -6309,9 +6176,10 @@ function importarExcel(input) {
       });
 
       if (importados === 0) {
-        showToast('No se encontraron datos en el Excel');
+        showToast('⚠️ No se encontraron hojas de meses en el Excel');
         return;
       }
+
       saveData();
       renderPresupuesto();
       updateDashboard();
@@ -6323,162 +6191,10 @@ function importarExcel(input) {
       console.error(err);
     }
     input.value = ''; // reset input
-    closeBanner(true); // cerrar banner si estaba abierto
   };
   reader.readAsArrayBuffer(file);
 }
 
-
-// ══════════════════════════════════════════
-// PANEL DE ACTUALIZACIÓN DE TASAS
-// ══════════════════════════════════════════
-
-function initConfigPanel() {
-  // Cargar tasas guardadas en localStorage si existen
-  const saved = JSON.parse(localStorage.getItem('fsTasasCustom') || '{}');
-
-  // Plataformas
-  const formInv = document.getElementById('tasas-inversiones-form');
-  if (formInv) {
-    formInv.innerHTML = '';
-    PLATFORMS.forEach(p => {
-      const row = document.createElement('div');
-      row.style.cssText = 'display:grid;grid-template-columns:1fr 80px;gap:8px;margin-bottom:8px;align-items:center';
-      const tasa = saved['plat_' + p.id] ?? p.rate;
-      row.innerHTML = `
-        <div style="font-size:13px;color:var(--text)">${p.emoji} ${p.name}</div>
-        <input type="number" class="field-input" style="font-size:12px;padding:5px 8px;text-align:right"
-          value="${tasa}" step="0.01" min="0" max="50"
-          oninput="fsTasasTemp['plat_${p.id}']=parseFloat(this.value)||0"
-          data-id="plat_${p.id}">
-      `;
-      formInv.appendChild(row);
-    });
-    const fechaEl = document.getElementById('fecha-inversiones');
-    if (fechaEl) fechaEl.value = saved['fecha_inversiones'] || TASAS_FECHAS.inversiones.fecha;
-  }
-
-  // AFOREs
-  const formAf = document.getElementById('tasas-afores-form');
-  if (formAf) {
-    formAf.innerHTML = '';
-    AFORES.filter(a => a.irn !== null).forEach(a => {
-      const row = document.createElement('div');
-      row.style.cssText = 'display:grid;grid-template-columns:1fr 80px;gap:8px;margin-bottom:8px;align-items:center';
-      const irn = saved['afore_' + a.id] ?? a.irn;
-      row.innerHTML = `
-        <div style="font-size:13px;color:var(--text)">${a.emoji} ${a.name}</div>
-        <input type="number" class="field-input" style="font-size:12px;padding:5px 8px;text-align:right"
-          value="${irn}" step="0.01" min="0" max="30"
-          oninput="fsTasasTemp['afore_${a.id}']=parseFloat(this.value)||0"
-          data-id="afore_${a.id}">
-      `;
-      formAf.appendChild(row);
-    });
-    const fechaEl = document.getElementById('fecha-afores');
-    if (fechaEl) fechaEl.value = saved['fecha_afores'] || TASAS_FECHAS.afores.fecha;
-  }
-
-  // Hipotecas
-  const formHip = document.getElementById('tasas-hipotecas-form');
-  if (formHip) {
-    formHip.innerHTML = '';
-    BANKS.forEach(b => {
-      const row = document.createElement('div');
-      row.style.cssText = 'display:grid;grid-template-columns:1fr 80px;gap:8px;margin-bottom:8px;align-items:center';
-      const rate = saved['bank_' + b.id] ?? b.rate;
-      row.innerHTML = `
-        <div style="font-size:13px;color:var(--text)">${b.name}</div>
-        <input type="number" class="field-input" style="font-size:12px;padding:5px 8px;text-align:right"
-          value="${rate}" step="0.01" min="0" max="30"
-          oninput="fsTasasTemp['bank_${b.id}']=parseFloat(this.value)||0"
-          data-id="bank_${b.id}">
-      `;
-      formHip.appendChild(row);
-    });
-    const fechaEl = document.getElementById('fecha-hipotecas');
-    if (fechaEl) fechaEl.value = saved['fecha_hipotecas'] || TASAS_FECHAS.hipotecas.fecha;
-  }
-
-  // Inflación
-  const inf = document.getElementById('cfg-inflacion');
-  if (inf) inf.value = saved['inflacion'] || 3.55;
-  const tiie = document.getElementById('cfg-tiie');
-  if (tiie) tiie.value = saved['tiie'] || 10.0;
-}
-
-let fsTasasTemp = {};
-
-function guardarTasas() {
-  const saved = JSON.parse(localStorage.getItem('fsTasasCustom') || '{}');
-  Object.assign(saved, fsTasasTemp);
-
-  // Fechas
-  const fi = document.getElementById('fecha-inversiones');
-  const fa = document.getElementById('fecha-afores');
-  const fh = document.getElementById('fecha-hipotecas');
-  if (fi) saved['fecha_inversiones'] = fi.value;
-  if (fa) saved['fecha_afores']      = fa.value;
-  if (fh) saved['fecha_hipotecas']   = fh.value;
-
-  // Inflación
-  const inf  = parseFloat(document.getElementById('cfg-inflacion')?.value) || 3.55;
-  const tiie = parseFloat(document.getElementById('cfg-tiie')?.value) || 10.0;
-  saved['inflacion'] = inf;
-  saved['tiie']      = tiie;
-
-  try { localStorage.setItem('fsTasasCustom', JSON.stringify(saved)); } catch(e) {}
-
-  // Aplicar tasas a las constantes en memoria
-  PLATFORMS.forEach(p => {
-    if (saved['plat_' + p.id] !== undefined) p.rate = saved['plat_' + p.id];
-  });
-  AFORES.forEach(a => {
-    if (saved['afore_' + a.id] !== undefined) a.irn = saved['afore_' + a.id];
-  });
-  BANKS.forEach(b => {
-    if (saved['bank_' + b.id] !== undefined) b.rate = saved['bank_' + b.id];
-  });
-
-  // Actualizar fechas en los badges
-  if (fi && TASAS_FECHAS.inversiones) TASAS_FECHAS.inversiones.fecha = fi.value;
-  if (fa && TASAS_FECHAS.afores)      TASAS_FECHAS.afores.fecha      = fa.value;
-  if (fh && TASAS_FECHAS.hipotecas)   TASAS_FECHAS.hipotecas.fecha   = fh.value;
-  initFechaBadges();
-
-  // Actualizar defaults de inflación en calculadoras
-  ['calc-inflacion','br-inflacion','ret-inflacion','meta-inflacion'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = inf;
-  });
-
-  // Re-renderizar comparadores
-  renderPlatforms();
-  renderAforeGrid();
-  updateBankCompare();
-  fsTasasTemp = {};
-  showToast('Tasas actualizadas correctamente');
-}
-
-// Cargar tasas personalizadas al inicio
-function loadCustomTasas() {
-  const saved = JSON.parse(localStorage.getItem('fsTasasCustom') || '{}');
-  if (Object.keys(saved).length === 0) return;
-  PLATFORMS.forEach(p => { if (saved['plat_' + p.id] !== undefined) p.rate = saved['plat_' + p.id]; });
-  AFORES.forEach(a => { if (saved['afore_' + a.id] !== undefined) a.irn = saved['afore_' + a.id]; });
-  BANKS.forEach(b => { if (saved['bank_' + b.id] !== undefined) b.rate = saved['bank_' + b.id]; });
-  if (saved['inflacion']) {
-    ['calc-inflacion','br-inflacion','ret-inflacion','meta-inflacion'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.value = saved['inflacion'];
-    });
-  }
-  if (saved['fecha_inversiones']) TASAS_FECHAS.inversiones.fecha = saved['fecha_inversiones'];
-  if (saved['fecha_afores'])      TASAS_FECHAS.afores.fecha      = saved['fecha_afores'];
-  if (saved['fecha_hipotecas'])   TASAS_FECHAS.hipotecas.fecha   = saved['fecha_hipotecas'];
-}
-
-loadCustomTasas();
 initGumroadLinks();
 buildMonthBars();
 loadMetas();
